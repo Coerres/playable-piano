@@ -38,10 +38,34 @@ header .column span{
     font-size: 1.19rem;
 }
 .volume-slider input{
+    outline: none;
     accent-color: #fff;
 }
 .keys-checkbox input{
+    width: 60px;
+    height: 30px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
     appearance:  none;
+    border-radius: 30px;
+    background: #4b4b4b;
+}
+.keys-checkbox input::before{
+    content: "";
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    left: 5px;
+    border-radius: inherit;
+    position: absolute;
+    background: #8c8c8c;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.keys-checkbox input:checked::before{
+    left: 35px;
+    background: #fff;
 }
 .piano-keys .key{
     list-style: none;
